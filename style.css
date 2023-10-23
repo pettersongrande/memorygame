@@ -1,0 +1,188 @@
+
+/* GAME CARD GRID SCTRUCTURE*/
+
+#game {
+
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+
+}
+
+
+/* CARDS SETTINGS: CARD ITSELF --- FRONT --- BACK --- CONTENT--------------------------- */
+
+/* THE CARD ITSELF */
+
+#game div.cardModel {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 80%;
+  height: 220px;
+  /* margin: 30px; */
+  /* display: inline-block; */
+  background-position: center;
+  background-size: contain;
+  border-color: #FFD700;
+  border-width: 2px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+  
+}
+
+/* FRONT OF THE CARD */
+
+.front {
+
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 100%;
+  height: 220px;
+  /* margin: 30px; */
+  /* display: inline-block; */
+  background-position: center;
+  background-size: contain;
+  background-image: url("memeGameimgs/gretchencapa.png");
+  border-color: #FFD700;
+  border-width: 2px;
+  backface-visibility: hidden;
+  cursor: pointer;
+
+}
+
+
+/* BACK OF THE CARD */
+
+.back {
+
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 100%;
+  height: 220px;
+  /* margin: 30px; */
+  /* display: inline-block; */
+  background-position: center;
+  background-size: contain;
+  border-color: #FFD700;
+  border-width: 2px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  cursor: pointer;
+
+
+}
+
+/* transition effect */
+
+
+.flipCard {
+
+  transform: rotateY(180deg);
+
+}
+
+ /* STOPWATCH CARD */
+
+ .stopWatch {
+
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 80%;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  border-color: #FFD700;
+  border-width: 2px;
+
+
+
+ }
+
+
+
+/* intro container ---------------------------------------------------------------------*/
+
+.intro {
+
+  width: 80vw;
+  height: 90vh;
+  padding: 1em 10em 5em 10em;
+  /* margin: 1em auto 2em; */
+  /* min-width: 700px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 2em; */
+  
+}
+
+/* styling letters and buttons -------------------------------------------------------- */
+.intro h1 {
+  /* game title */
+  color: #851b96;
+  font-size: 3rem;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: bold;
+  font-size: 10em;
+  text-align: center;
+
+}
+
+
+.intro h2 {
+  /* best score */
+  color: #07138f;
+  font-size: 3rem;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+
+}
+
+.startbutton {
+
+  width: 15em;
+  height: 3em;
+  background-color: #0000ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  padding: 1em;
+  font-size: 1.2rem;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: bold;
+  
+
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #851b96;
+}
+
+.scrlUp {
+
+  font-size: 1.2em;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0000ff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+
+}
+
