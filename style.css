@@ -134,5 +134,10 @@ html {
 
 }
 
+.selectedCard {
+    background-color: black;
+    border-color: #ffc75f;
+}
+
 /* END OF GAME CONTAINER STYLES ------------------------------------------*/
 
