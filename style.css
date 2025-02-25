@@ -126,7 +126,7 @@ html {
     text-align: center;
     align-content: center;
     border: 1.5px solid whitesmoke;
-    background-color: #845ec2;
+    background: linear-gradient(5deg, #a46ffd, #4d2efc); 
     margin: 0.5em;
     border-radius: 1em;
     height: 21vh;
@@ -135,8 +135,12 @@ html {
 }
 
 .selectedCard {
-    background-color: black;
+    /* background: linear-gradient(5deg, #030303, #e1def2); */
+    background-image: url(imgs/gretchen1.gif);
+    background-size: 21vh 15.8vw;
+    background-repeat:no-repeat;
     border-color: #ffc75f;
+   
 }
 
 /* END OF GAME CONTAINER STYLES ------------------------------------------*/
