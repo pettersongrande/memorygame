@@ -18,10 +18,17 @@ renderGameBoard(game, imgs);
 game.addEventListener('dblclick', (e)=>{
     e.preventDefault();
     if(e.target.tagName === 'DIV'){
-        e.target.style.backgroundImage = e.target.dataset.src;
         e.target.classList.toggle('selectedCard'); 
         
-    }
+        if(e.target.classList.contains('selectedCard')){
+            e.target.style.backgroundImage = e.target.dataset.src;
+            
+        }
+
+        else {
+            e.target.style.backgroundImage = '';
+        };
+    };
 
 });
 
@@ -39,15 +46,14 @@ function divFactory(){
 //Parameter 1 : area to append elements.
 function renderGameBoard(displayArea, arrOfImgs){
     displayArea.innerHTML = '';
-    shuffle(imgs);
+    const shuffled = shuffle(imgs);
 
     for(let i = 0; i <=11; i++){
         const div = divFactory();
         div.innerHTML = 'CARD' + ' ' + i;       
         div.dataset.idx = allDivs.length;
-        div.dataset.src = imgs[i > 5 ? i - arrOfImgs.length : i];
-        
-        displayArea.append(div)
+        div.dataset.src = shuffled[i];        
+        displayArea.append(div);
         
     };
 
@@ -56,7 +62,9 @@ function renderGameBoard(displayArea, arrOfImgs){
 };
 
 // SHUFFLE
-function shuffle(arr){
+function shuffle(array){
+    const arr = [...array, ...array];
+
     let i = arr.length, j, temp;
     while (--i > 0){
         j = Math.floor(Math.random() * (i + 1));
@@ -65,6 +73,7 @@ function shuffle(arr){
         arr[i] = temp;
     }
     
+    return arr;
 }
 
 // const newImgs = shuffle(imgs);
