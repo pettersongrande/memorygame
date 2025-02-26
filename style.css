@@ -123,6 +123,7 @@ html {
 
 .card {
     color: white;
+    background-image: none;
     text-align: center;
     align-content: center;
     border: 1.5px solid whitesmoke;
@@ -135,9 +136,9 @@ html {
 }
 
 .selectedCard {
-    /* background: linear-gradient(5deg, #030303, #e1def2); */
-    background-image: url(imgs/gretchen1.gif);
-    background-size: 21vh 15.8vw;
+    /* background-image: url(imgs/nazare1.gif); */
+    background-size: cover;
+    background-position: center;
     background-repeat:no-repeat;
     border-color: #ffc75f;
    
