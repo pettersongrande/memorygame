@@ -15,8 +15,49 @@ const imgs = [
 renderGameBoard(game, imgs);
 
 // Event Listener ---------------------------------
-game.addEventListener('dblclick', (e)=>{
+game.addEventListener('click', (e)=>{
     e.preventDefault();
+    // cardInteraction();
+    if(e.target.tagName === 'DIV'){
+        e.target.classList.toggle('selectedCard'); 
+        
+        if(e.target.classList.contains('selectedCard')){
+            e.target.style.backgroundImage = e.target.dataset.src;
+            const source = e.target.dataset.src;
+            const sourceArray  = [];
+            sourceArray.push(source);
+            console.log(sourceArray);
+            
+            // closeUnmatched();
+            setTimeout(()=>{
+                e.target.style.backgroundImage = '';
+            }, 3000);
+        }
+
+        else {
+            e.target.style.backgroundImage = '';
+        };
+    }; 
+
+});
+
+// TESTS
+// ARE THESE CARDS THE SAME?
+// function cardChecker(){
+//     if(e.target.dataset.src === ){};
+// }
+
+// setTimeOut ***NOT WORKING***
+function closeUnmatched(){
+    setTimeout(()=>{
+        e.target.style.backgroundImage = '';
+    }, 3000);
+};
+
+// TESTE
+
+// CARD INTERACTION  ****NOT WORKING****
+function cardInteraction(){
     if(e.target.tagName === 'DIV'){
         e.target.classList.toggle('selectedCard'); 
         
@@ -28,9 +69,8 @@ game.addEventListener('dblclick', (e)=>{
         else {
             e.target.style.backgroundImage = '';
         };
-    };
-
-});
+    }; 
+};
 
 //DIV FACTORY: create a single DIV;
 function divFactory(){
@@ -74,6 +114,6 @@ function shuffle(array){
     }
     
     return arr;
-}
+};
 
 // const newImgs = shuffle(imgs);

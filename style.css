@@ -56,10 +56,10 @@ a img {
 /* INDEX PAGE STYLES */
 
 html {
+    color: #000;
+    font-family: 'Helvetica Neue',sans-serif;
     scroll-behavior: smooth;
     scrollbar-width:none;
-    font-family: 'Helvetica Neue',sans-serif;
-    color: #000;
 
 }
 
@@ -67,8 +67,8 @@ html {
 .mainContainer{
     background-color: #f9f971de;
     display: grid;
-    grid-template-rows: 10vh 10vh 75vh 5vh;
     grid-template-columns: 1fr 8fr 1.5fr;
+    grid-template-rows: 10vh 10vh 75vh 5vh;
     grid-template-areas: 
         "leftCorner  title         rightCorner"
         "leftCorner  instructions  rightCorner"
@@ -80,31 +80,31 @@ html {
 
 /* START OF TITLE CONTAINER STYLES */
 .titleContainer {
-    margin-top: 0.3em;
+    background-color: #ff6f91;
+    border-bottom: 2px solid white;
     border-radius: 0.5em 0.5em 0 0;
     color: #5f0ee2;
-    border-bottom: 2px solid white;
     font-size: 3rem;
     font-weight: bold;
-    text-align: center;
-    background-color: #ff6f91;
     grid-area: title;
     line-height: 1.5;
+    margin-top: 0.3em;
+    text-align: center;
 }
 
 /* END OF TITLE CONTAINER STYLES -----------------------------------------*/
 
 /* START OF INSTRUCTIONS CONTAINER STYLES */
 .instruContainer {
-    color: #5f0ee2;
     background-color: #ffc75f;
     border-bottom: 2px solid white;
-    grid-area: instructions;
-    text-align: left;
-    padding-top: 0.5em;
-    padding-left: 1em;
-    line-height: 1.5;
+    color: #5f0ee2;
     font-size: 0.75rem;
+    grid-area: instructions;
+    line-height: 1.5;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    text-align: left;
     
 }
 
@@ -112,33 +112,33 @@ html {
 
 /* START OF GAME CONTAINER STYLES */
 .gameContainer {
+    align-content: center;
+    background-color: #ff6f91;
     border-radius: 0 0 1.5em 1.5em;
     display: flex;
-    justify-content: space-evenly;
-    align-content: center;
     flex-wrap: wrap;
-    background-color: #ff6f91;
     grid-area: game;
+    justify-content: space-evenly;
 }
 
 .card {
-    color: white;
-    background-image: none;
-    text-align: center;
     align-content: center;
-    border: 1.5px solid whitesmoke;
+    background-image: none;
     background: linear-gradient(5deg, #a46ffd, #4d2efc); 
-    margin: 0.5em;
     border-radius: 1em;
+    border: 1.5px solid whitesmoke;
+    color: white;
     height: 21vh;
+    margin: 0.5em;
+    text-align: center;
     width: 15vw;
 
 }
 
 .selectedCard {
-    background-size: cover;
     background-position: center;
     background-repeat:no-repeat;
+    background-size: cover;
     border-color: #ffc75f;
    
 }
